@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs
+/contrib/Waterfall/.vs
+/contrib/Waterfall/.vs
+/src/TheLittleMoeNewLlc.MgWaterfall/bin/Debug/netcoreapp1.1
+/src/TheLittleMoeNewLlc.MgWaterfall/obj
+/src/TheLittleMoeNewLlc.MgWaterfall/appsettings.Development.json
