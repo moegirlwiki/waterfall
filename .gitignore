@@ -9,3 +9,5 @@
 /src/TheLittleMoeNewLlc.MgWaterfall/obj
 /src/TheLittleMoeNewLlc.MgWaterfall/appsettings.Development.json
 /src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/lib
+/src/TheLittleMoeNewLlc.MgWaterfall/node_modules
+/src/TheLittleMoeNewLlc.MgWaterfall/package-lock.json

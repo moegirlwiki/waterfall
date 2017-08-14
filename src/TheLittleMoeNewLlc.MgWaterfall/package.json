@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "moegirlpedia-waterfall-site",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-masonry-component": "^5.0.7"
+  }
+}
