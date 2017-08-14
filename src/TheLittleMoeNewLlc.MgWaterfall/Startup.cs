@@ -76,6 +76,9 @@ namespace TheLittleMoeNewLlc.MgWaterfall
                 //config
                 //  .SetLoadBabel(false)
                 //  .AddScriptWithoutTransform("~/Scripts/bundle.server.js");
+
+                // React Masonry Component
+
             });
 
             app.UseStaticFiles();

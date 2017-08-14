@@ -6,7 +6,12 @@
 
   <PropertyGroup>
     <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+    <PreBuildEvent>powershell -ExecutionPolicy Bypass -NoLogo -File "$(SolutionDir)..\..\src\TheLittleMoeNewLlc.MgWaterfall\PreBuild.ps1" -ProjectDir "$(SolutionDir)..\..\src\TheLittleMoeNewLlc.MgWaterfall"</PreBuildEvent>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\app\Home.jsx" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
