@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "react": "^15.6.1",
-    "react-masonry-component": "^5.0.7"
+    "react-masonry-component": "^5.0.7",
+    "react-visibility-sensor": "^3.10.1"
   }
 }
