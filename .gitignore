@@ -15,3 +15,4 @@
 /src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/app/*.map
 /src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/css/*.min.css
 /src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/css/*.map
+/src/TheLittleMoeNewLlc.MgWaterfall/appsettings.*.json
