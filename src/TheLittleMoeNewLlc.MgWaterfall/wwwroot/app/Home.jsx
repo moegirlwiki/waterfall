@@ -11,7 +11,7 @@ var CardGallery = React.createClass({
         var childElements = this.props.elements.map(function (element) {
             return (
                 <div className="card" key={element.pageId}>
-                    <img className="card-cover" src={element.thumbnail} />
+                    <img height={element.height} className="card-cover" src={element.thumbnail} />
                     <h1 className="card-title">{element.title}</h1>
                 </div>
             );

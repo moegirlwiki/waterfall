@@ -16,6 +16,7 @@ namespace TheLittleMoeNewLlc.MgWaterfall.Controllers
     public class NewPageQueryController : Controller
     {
         private IOptions<RpcEndpointConfiguration> m_rpcEndpointOptions;
+        private const int CardWidth = 220;
 
         public NewPageQueryController(IOptions<RpcEndpointConfiguration> rpcEndpointOptions)
         {
@@ -79,7 +80,9 @@ namespace TheLittleMoeNewLlc.MgWaterfall.Controllers
                             {
                                 PageId = (long) page.pageid,
                                 Thumbnail = (string) page.thumbnail.source,
-                                Title = (string) page.title
+                                Title = (string) page.title,
+                                Height = (((double) page.thumbnail.height * 220) / (double) page.thumbnail.width),
+                                Width = 220
                             });
                         }
                     }

@@ -5,5 +5,7 @@
         public string Title { get; set; }
         public long PageId { get; set; }
         public string Thumbnail { get; set; }
+        public double Width { get; set; }
+        public double Height { get; set; }
     }
 }
