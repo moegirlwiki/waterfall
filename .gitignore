@@ -17,3 +17,4 @@
 /src/TheLittleMoeNewLlc.MgWaterfall/appsettings.*.json
 /src/TheLittleMoeNewLlc.MgWaterfall/bin
 /src/TheLittleMoeNewLlc.MgWaterfall/Properties/PublishProfiles
+/src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/dist

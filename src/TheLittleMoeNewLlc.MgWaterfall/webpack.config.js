@@ -4,8 +4,8 @@ const webpack = require('webpack');
 module.exports = {
     context: path.join(__dirname, 'wwwroot'),
     entry: {
-        'home': './app/Home.jsx',
-        'home.min': './app/Home.jsx'
+        'index': './components/home/Index.tsx',
+        'index.min': './components/home/Index.tsx'
     },
     devtool: "source-map",
     output: {
@@ -14,15 +14,23 @@ module.exports = {
     },
     module: {
         loaders: [
+            // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+            {
+                test: /\.tsx?$/,
+                loader: "awesome-typescript-loader"
+            },
             // Transform JavaScript files via Babel
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loader: '../node_modules/jsx-loader?insertPragma=React.DOM&harmony'
+            },
+            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader"
             }
-            // Uncomment this if you want to use your own version of React instead of the version 
-            // bundled with ReactJS.NET.
-            //{ test: require.resolve('react'), loader: 'expose?React' }
         ],
     },
     plugins: [
@@ -33,12 +41,12 @@ module.exports = {
         })
     ],
     resolve: {
-        // Allow require('./blah') to require blah.jsx
-        extensions: [ '.js', '.jsx' ]
+        extensions: [ '.ts', '.tsx', '.js', '.jsx', '.json' ]
     },
     externals: {
         // Use external version of React (from CDN for client-side, or bundled with ReactJS.NET for server-side)
         // Comment this out if you want to load your own version of React
-        react: 'React'
+        react: 'React',
+        "react-dom": 'ReactDOM'
     }
 };

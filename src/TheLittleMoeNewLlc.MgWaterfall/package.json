@@ -3,15 +3,20 @@
   "name": "moegirlpedia-waterfall-site",
   "private": true,
   "devDependencies": {
+    "awesome-typescript-loader": "^3.2.3",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "expose-loader": "^0.7.3",
     "jsx-loader": "^0.13.2",
+    "source-map-loader": "^0.2.1",
+    "typescript": "^2.4.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.5.4"
   },
   "dependencies": {
+    "@types/react": "^16.0.2",
+    "@types/react-dom": "^15.5.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-masonry-component": "^5.0.7",

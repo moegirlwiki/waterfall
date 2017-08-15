@@ -4,5 +4,6 @@
     <ShowAllFiles>false</ShowAllFiles>
     <WebStackScaffolding_DependencyDialogWidth>600</WebStackScaffolding_DependencyDialogWidth>
     <NameOfLastUsedPublishProfile>mgmasonry - Web Deploy</NameOfLastUsedPublishProfile>
+    <ToolsVersionPromptShown>0.0</ToolsVersionPromptShown>
   </PropertyGroup>
 </Project>

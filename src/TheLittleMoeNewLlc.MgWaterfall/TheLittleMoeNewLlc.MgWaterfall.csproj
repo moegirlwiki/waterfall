@@ -2,11 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <PropertyGroup>
     <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\components\home\CardGallery.tsx" />
+    <Content Remove="wwwroot\components\home\Index.tsx" />
+    <Content Remove="wwwroot\components\home\RecentNewPagesHost.tsx" />
+    <Content Remove="wwwroot\components\models\Card.ts" />
+    <Content Remove="wwwroot\components\typings\react-visibility-sensor.d.ts" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BundlerMinifier.Core" Version="2.4.337" />
@@ -26,7 +35,15 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="wwwroot\app\" />
     <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\components\home\CardGallery.tsx" />
+    <TypeScriptCompile Include="wwwroot\components\home\Index.tsx" />
+    <TypeScriptCompile Include="wwwroot\components\home\RecentNewPagesHost.tsx" />
+    <TypeScriptCompile Include="wwwroot\components\models\Card.ts" />
+    <TypeScriptCompile Include="wwwroot\components\typings\react-visibility-sensor.d.ts" />
   </ItemGroup>
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Condition="$(Configuration) == 'Debug'" Command="npm run buildDev" />
