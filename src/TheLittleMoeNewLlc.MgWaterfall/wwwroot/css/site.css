@@ -40,7 +40,7 @@ textarea {
 @media screen {
     .card {
         float: left;
-        margin-bottom: 20px;
+        width: 240px;
         margin: 5px;
         box-sizing: border-box;
         background-color: #fff;
@@ -51,17 +51,15 @@ textarea {
         margin-left: 10px;
         margin-right: 10px;
         margin-top: 10px;
-        max-width: 220px;
+        width: 220px;
     }
 
     .card .card-title {
         font-size: 20px;
-        font-family: 'Segoe WP', 'Segoe UI', sans-serif;
+        font-family: 'Segoe WP', 'Segoe UI', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
         font-weight: 600;
-        margin-top: 10px;
-        margin-left: 15px;
-        margin-right: 15px;
-        max-width: 210px;
+        margin: 10px;
+        width: 220px;
     }
 }
 

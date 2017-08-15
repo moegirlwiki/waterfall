@@ -38,7 +38,7 @@ var cards = [
     {
         key: '3accdb6a-f4b6-4dca-a0d6-3e13fc345acf',
         title: 'Gear Of Wars 4',
-        src: 'https://img.moegirl.org/common/thumb/2/22/Gears_Of_War_4_Store_Preliminary_Background.jpg/250px-Gears_Of_War_4_Store_Preliminary_Background.jpg'
+        src: 'https://img.moegirl.org/common/thumb/2/22/Gears_Of_War_4_Store_Preliminary_Background.jpg/450px-Gears_Of_War_4_Store_Preliminary_Background.jpg'
     },
     {
         key: '0cf48b0a-2faa-4ecd-a0e6-a931f91d5fd0',

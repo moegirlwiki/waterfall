@@ -11,3 +11,4 @@
 /src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/lib
 /src/TheLittleMoeNewLlc.MgWaterfall/node_modules
 /src/TheLittleMoeNewLlc.MgWaterfall/package-lock.json
+*.bundle.js
