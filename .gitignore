@@ -5,7 +5,6 @@
 /.vs
 /contrib/Waterfall/.vs
 /contrib/Waterfall/.vs
-/src/TheLittleMoeNewLlc.MgWaterfall/bin/Debug/netcoreapp1.1
 /src/TheLittleMoeNewLlc.MgWaterfall/obj
 /src/TheLittleMoeNewLlc.MgWaterfall/appsettings.Development.json
 /src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/lib
@@ -16,3 +15,4 @@
 /src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/css/*.min.css
 /src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/css/*.map
 /src/TheLittleMoeNewLlc.MgWaterfall/appsettings.*.json
+/src/TheLittleMoeNewLlc.MgWaterfall/bin
