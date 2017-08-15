@@ -28,7 +28,8 @@ module.exports = {
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
             include: /\.min\.js$/,
-            minimize: true
+            minimize: true,
+            sourceMap: true
         })
     ],
     resolve: {

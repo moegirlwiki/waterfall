@@ -18,7 +18,7 @@
     "react-visibility-sensor": "^3.10.1"
   },
   "scripts": {
-    "buildDev": "SET NODE_ENV=development && webpack",
-    "buildProd": "SET NODE_ENV=production && webpack && dotnet bundle"
+    "buildDev": "SET NODE_ENV=development && webpack -d",
+    "buildProd": "SET NODE_ENV=production && webpack -p && dotnet bundle"
   }
 }
