@@ -22,9 +22,9 @@ namespace TheLittleMoeNewLlc.MgWaterfall.Controllers
             m_rpcEndpointOptions = rpcEndpointOptions;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string id = null)
         {
-            var rel = await GetRecentNewPagesWithThumnnailAsync(50, null, HttpContext.RequestAborted);
+            var rel = await GetRecentNewPagesWithThumnnailAsync(50, id, HttpContext.RequestAborted);
 
             return Json(new {
                 ContinuationToken = rel.Item2,
