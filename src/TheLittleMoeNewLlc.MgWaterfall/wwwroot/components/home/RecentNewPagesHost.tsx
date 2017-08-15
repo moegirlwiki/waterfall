@@ -2,7 +2,9 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import VisibilitySensor from "react-visibility-sensor";
+// Import directive doesn't work but require do
+// import VisibilitySensor from "react-visibility-sensor";
+const VisibilitySensor = require('react-visibility-sensor');
 
 import { CardGallery } from "./CardGallery";
 import { ICard } from "../models/Card";
@@ -68,10 +70,10 @@ export class RecentNewPagesHost extends React.Component<IRecentNewPagesHost, IRe
     }
 
     render() {
-        // <VisibilitySensor onChange={this.onVisibilityChange} />
         return (
             <div>
                 <CardGallery elements={this.state.pages} />
+                <VisibilitySensor onChange={ (isVisible: boolean) => this.onVisibilityChange(isVisible) } />
             </div>
         );
     }
