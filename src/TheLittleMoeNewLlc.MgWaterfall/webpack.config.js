@@ -1,13 +1,16 @@
 ﻿const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     context: path.join(__dirname, 'wwwroot'),
     entry: {
-        home: './app/Home.jsx'
+        'home': './app/Home.jsx',
+        'home.min': './app/Home.jsx'
     },
+    devtool: "source-map",
     output: {
         path: path.join(__dirname, 'wwwroot/app'),
-        filename: '[name].bundle.js'
+        filename: '[name].js'
     },
     module: {
         loaders: [
@@ -22,6 +25,12 @@ module.exports = {
             //{ test: require.resolve('react'), loader: 'expose?React' }
         ],
     },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            include: /\.min\.js$/,
+            minimize: true
+        })
+    ],
     resolve: {
         // Allow require('./blah') to require blah.jsx
         extensions: [ '.js', '.jsx' ]

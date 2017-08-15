@@ -5,5 +5,10 @@
 <div id="card-container"></div>
 
 @section Scripts {
-    <script src="@Url.Content("~/app/home.bundle.js")"></script>
+    <environment names="Development">
+        <script src="~/app/home.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/app/home.min.js" asp-append-version="true"></script>
+    </environment>
 }

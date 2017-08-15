@@ -11,4 +11,7 @@
 /src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/lib
 /src/TheLittleMoeNewLlc.MgWaterfall/node_modules
 /src/TheLittleMoeNewLlc.MgWaterfall/package-lock.json
-*.bundle.js
+/src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/app/*.js
+/src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/app/*.map
+/src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/css/*.min.css
+/src/TheLittleMoeNewLlc.MgWaterfall/wwwroot/css/*.map

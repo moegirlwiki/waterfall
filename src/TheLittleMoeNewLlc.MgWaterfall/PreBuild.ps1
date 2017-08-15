@@ -9,5 +9,8 @@ param (
 # Set correct location
 Set-Location $ProjectDir
 
+# Run BundlerMinifier
+dotnet bundle
+
 # Run webpack
 ./node_modules/.bin/webpack
