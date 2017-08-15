@@ -6,7 +6,6 @@
 
   <PropertyGroup>
     <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
-    <PreBuildEvent>powershell -ExecutionPolicy Bypass -NoLogo -File "$(SolutionDir)..\..\src\TheLittleMoeNewLlc.MgWaterfall\PreBuild.ps1" -ProjectDir "$(SolutionDir)..\..\src\TheLittleMoeNewLlc.MgWaterfall"</PreBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,5 +28,9 @@
   <ItemGroup>
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Condition="$(Configuration) == 'Debug'" Command="npm run buildDev" />
+    <Exec Condition="$(Configuration) == 'Release'" Command="npm run buildProd" />
+  </Target>
 
 </Project>
