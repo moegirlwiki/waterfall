@@ -10,7 +10,8 @@ export class CardGallery extends React.Component<ICardGallery, undefined> {
     render() {
         var masonryOptions = {
             transitionDuration: '0.4s',
-            stagger: 30
+            stagger: 30,
+            isFitWidth: true
         };
 
         var childElements = this.props.elements.map(function (element) {

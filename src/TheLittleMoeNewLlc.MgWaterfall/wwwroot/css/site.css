@@ -69,3 +69,7 @@ textarea {
 .loading-indicator-container {
     margin: 10px;
 }
+
+.articles-gallery {
+    margin: 0 auto;
+}
