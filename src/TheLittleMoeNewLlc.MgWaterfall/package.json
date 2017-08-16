@@ -16,8 +16,10 @@
     "webpack-sha-hash": "^1.1.0"
   },
   "dependencies": {
+    "@types/jquery": "^3.2.11",
     "@types/react": "^16.0.2",
     "@types/react-dom": "^15.5.2",
+    "jquery": "^3.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-masonry-component": "^5.0.7",

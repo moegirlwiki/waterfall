@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-// Import directive doesn't work but require do
-// import VisibilitySensor from "react-visibility-sensor";
+import * as $ from "jquery";
+
 const VisibilitySensor = require('react-visibility-sensor');
 
 import { CardGallery } from "./CardGallery";
@@ -35,16 +35,12 @@ export class RecentNewPagesHost extends React.Component<IRecentNewPagesHost, IRe
     }
 
     private loadData() {
-        var xhr = new XMLHttpRequest();
-        var endpoint = '/NewPageQuery';
-
-        if (this.state.continuationToken) {
-            endpoint = '/NewPageQuery?id=' + encodeURIComponent(this.state.continuationToken);
-        }
-
-        xhr.open('get', endpoint, true);
-        xhr.onload = function () {
-            var rel = JSON.parse(xhr.responseText);
+        $.ajax({
+            url: this.state.continuationToken ?
+                `/NewPageQuery?id=${encodeURIComponent(this.state.continuationToken)}` :
+                '/NewPageQuery',
+            type: 'GET'
+        }).then(rel => {
             if (this.state.continuationToken) {
                 this.setState({
                     pages: this.state.pages.concat(rel.pages),
@@ -56,9 +52,7 @@ export class RecentNewPagesHost extends React.Component<IRecentNewPagesHost, IRe
                     continuationToken: rel.continuationToken
                 });
             }
-        }.bind(this);
-
-        xhr.send();
+        });
     }
 
     onVisibilityChange(isVisible: boolean) {
