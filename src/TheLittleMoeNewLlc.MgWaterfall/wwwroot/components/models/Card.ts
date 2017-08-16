@@ -4,4 +4,5 @@
     width: number;
     height: number;
     pageId: number;
+    author: string;
 }

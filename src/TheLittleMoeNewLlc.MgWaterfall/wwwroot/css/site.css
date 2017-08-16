@@ -60,9 +60,44 @@ textarea {
     .card .card-title {
         font-size: 20px;
         font-family: 'Segoe WP', 'Segoe UI', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
-        font-weight: 600;
+        font-weight: 400;
         margin: 10px;
+        margin-bottom: 0;
         width: 220px;
+        line-height: 1.2em;
+    }
+
+    .card-variant1 {
+        background-color: #E82F2C;
+        color: #fff;
+        min-height: 80px;
+    }
+
+    .card-variant .card-title {
+        font-size: 28px;
+    }
+
+    .card-variant2 {
+        background-color: #E88A2C;
+        color: #fff;
+        min-height: 80px;
+    }
+
+    .card-variant .card-title {
+        font-size: 28px;
+    }
+
+    .card .author-avatar {
+        width: 20px;
+        border-radius: 50%;
+        margin: 10px;
+    }
+
+    .card .author-name {
+        font-size: 12px;
+        font-family: 'Segoe WP', 'Segoe UI', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei UI', sans-serif;
+        display: inline-block;
+        font-weight: 600;
     }
 }
 

@@ -46,7 +46,7 @@ namespace TheLittleMoeNewLlc.MgWaterfall.Controllers
                 // First set of request will fetch recent new pages
                 var requestUrl = $"{m_rpcEndpointOptions.Value.ApiEndpoint}?action=query&format=json&" +
                     $"prop=&list=recentchanges&utf8=1&formatversion=2&" +
-                    $"rclimit={WebUtility.UrlEncode(limit.ToString("G"))}&rctype=new";
+                    $"rclimit={WebUtility.UrlEncode(limit.ToString("G"))}&rctype=new&rcprop=title%7Ctimestamp%7Cids%7Cuser";
 
                 if (!string.IsNullOrEmpty(queryContinuationToken))
                 {
@@ -75,17 +75,36 @@ namespace TheLittleMoeNewLlc.MgWaterfall.Controllers
 
                         foreach (var page in imgResponse.query.pages)
                         {
-                            if (page.thumbnail == null) continue;
-                            ret.Add(new Page
+                            var retPage = new Page
                             {
-                                PageId = (long) page.pageid,
-                                Thumbnail = (string) page.thumbnail.source,
-                                Title = (string) page.title,
-                                Height = (((double) page.thumbnail.height * 220) / (double) page.thumbnail.width),
-                                Width = 220
-                            });
+                                PageId = (long)page.pageid,
+                                Title = (string)page.title
+                            };
+
+                            if (page.thumbnail != null)
+                            {
+                                retPage.Thumbnail = (string) page.thumbnail.source;
+                                retPage.Height = (((double) page.thumbnail.height * 220) / (double) page.thumbnail.width);
+                                retPage.Width = 220;
+                            }
+
+                            ret.Add(retPage);
                         }
                     }
+
+                    var joinedAuthorData = from k in recentItems
+                                           join v in ret on k.Title equals v.Title into m
+                                           from s in m.DefaultIfEmpty()
+                                           select new Page {
+                                               Author = k.Username,
+                                               Height = s.Height,
+                                               PageId = s.PageId,
+                                               Thumbnail = s.Thumbnail,
+                                               Title = s.Title,
+                                               Width = s.Width
+                                           };
+
+                    ret = joinedAuthorData.ToList();
                 }
             }
 

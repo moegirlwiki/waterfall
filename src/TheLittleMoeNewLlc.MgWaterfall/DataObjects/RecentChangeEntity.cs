@@ -13,5 +13,8 @@ namespace TheLittleMoeNewLlc.MgWaterfall.DataObjects
 
         [JsonProperty("timestamp")]
         public DateTimeOffset Timestamp { get; set; }
+
+        [JsonProperty("user")]
+        public string Username { get; set; }
     }
 }
