@@ -16,5 +16,8 @@ namespace TheLittleMoeNewLlc.MgWaterfall.DataObjects
 
         [JsonProperty("user")]
         public string Username { get; set; }
+
+        [JsonProperty("ns")]
+        public int NamespaceId { get; set; }
     }
 }

@@ -1,8 +1,10 @@
 ﻿export interface ICard {
-    thumbnail: string;
+    thumbnail?: string;
+    width?: number;
+    height?: number;
     title: string;
-    width: number;
-    height: number;
     pageId: number;
     author: string;
+    link: string;
+    namespaceId?: number;
 }

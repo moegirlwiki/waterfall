@@ -20,7 +20,7 @@
   
   <ItemGroup>
     <Content Update="wwwroot\app\*.map" CopyToPublishDirectory="Never" />
-    <Content Update="wwwroot\dist" CopyToPublishDirectory="Never" />
+    <Content Update="wwwroot\dist\" CopyToPublishDirectory="Never" />
   </ItemGroup>
 
   <ItemGroup>

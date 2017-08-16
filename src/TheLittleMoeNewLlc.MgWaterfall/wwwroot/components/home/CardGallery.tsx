@@ -20,8 +20,8 @@ export class CardGallery extends React.Component<ICardGallery, undefined> {
 
     render() {
         var masonryOptions = {
-            transitionDuration: '0.4s',
-            stagger: 30,
+            transitionDuration: '0.2s',
+            stagger: 15,
             isFitWidth: true
         };
 
@@ -35,7 +35,8 @@ export class CardGallery extends React.Component<ICardGallery, undefined> {
             }
 
             return (
-                <div className={cardClassName} key={element.pageId}>
+                <div className={cardClassName} key={element.pageId} data-namespaceId={element.namespaceId}
+                    onClick={() => window.open(element.link, '_blank')}>
                     {element.thumbnail &&
                         <img height={element.height} className="card-cover" src={element.thumbnail} />
                     }

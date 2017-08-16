@@ -77,8 +77,9 @@ namespace TheLittleMoeNewLlc.MgWaterfall.Controllers
                         {
                             var retPage = new Page
                             {
-                                PageId = (long)page.pageid,
-                                Title = (string)page.title
+                                PageId = (long) page.pageid,
+                                Title = (string) page.title,
+                                Link = $"{m_rpcEndpointOptions.Value.SiteEndpoint}{(string) page.title}"
                             };
 
                             if (page.thumbnail != null)
@@ -101,7 +102,9 @@ namespace TheLittleMoeNewLlc.MgWaterfall.Controllers
                                                PageId = s.PageId,
                                                Thumbnail = s.Thumbnail,
                                                Title = s.Title,
-                                               Width = s.Width
+                                               Width = s.Width,
+                                               Link = s.Link,
+                                               NamespaceId = k.NamespaceId
                                            };
 
                     ret = joinedAuthorData.ToList();

@@ -7,5 +7,6 @@ namespace TheLittleMoeNewLlc.MgWaterfall.DataObjects
     public class RpcEndpointConfiguration
     {
         public string ApiEndpoint { get; set; }
+        public string SiteEndpoint { get; set; }
     }
 }
