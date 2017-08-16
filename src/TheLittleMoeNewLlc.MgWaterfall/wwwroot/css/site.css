@@ -67,10 +67,13 @@ textarea {
         line-height: 1.2em;
     }
 
+    .card-variant {
+        min-height: 80px;
+    }
+
     .card-variant1 {
         background-color: #E82F2C;
         color: #fff;
-        min-height: 80px;
     }
 
     .card-variant .card-title {
@@ -80,7 +83,21 @@ textarea {
     .card-variant2 {
         background-color: #E88A2C;
         color: #fff;
-        min-height: 80px;
+    }
+
+    .card-variant3 {
+        background-color: #3D81E8;
+        color: #fff;
+    }
+
+    .card-variant4 {
+        background-color: #459431;
+        color: #fff;
+    }
+
+    .card-variant5 {
+        background-color: #fff;
+        color: #000;
     }
 
     .card-variant .card-title {

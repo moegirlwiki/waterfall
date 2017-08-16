@@ -10,7 +10,7 @@ export class CardGallery extends React.Component<ICardGallery, undefined> {
 
     private m_avatarEndpoint: string = "https://commons.moegirl.org/extensions/Avatar/avatar.php?user=";
     private m_plainTextCardVariantClassNamePrefix: string = "card-variant";
-    private m_plainTextCardVariants: number = 2;
+    private m_plainTextCardVariants: number = 5;
 
     private getRandomIntInclusive(min: number, max: number): number {
         min = Math.ceil(min);
