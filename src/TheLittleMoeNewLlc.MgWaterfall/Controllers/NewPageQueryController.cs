@@ -75,9 +75,12 @@ namespace TheLittleMoeNewLlc.MgWaterfall.Controllers
 
                         foreach (var page in imgResponse.query.pages)
                         {
+                            // Fix by case: If page removed
+                            if (page?.pageid == null || page?.title == null || page?.missing == true) continue;
+
                             var retPage = new Page
                             {
-                                PageId = (long) page.pageid,
+                                PageId = (long) page?.pageid,
                                 Title = (string) page.title,
                                 Link = $"{m_rpcEndpointOptions.Value.SiteEndpoint}{(string) page.title}"
                             };
@@ -95,7 +98,7 @@ namespace TheLittleMoeNewLlc.MgWaterfall.Controllers
 
                     var joinedAuthorData = from k in recentItems
                                            join v in ret on k.Title equals v.Title into m
-                                           from s in m.DefaultIfEmpty()
+                                           from s in m
                                            select new Page {
                                                Author = k.Username,
                                                Height = s.Height,
