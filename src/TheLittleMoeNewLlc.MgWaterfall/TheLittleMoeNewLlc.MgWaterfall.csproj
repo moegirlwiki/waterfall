@@ -11,6 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\dist\**" />
+    <Content Remove="wwwroot\dist\**" />
+    <EmbeddedResource Remove="wwwroot\dist\**" />
+    <None Remove="wwwroot\dist\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\components\home\CardGallery.tsx" />
     <Content Remove="wwwroot\components\home\Index.tsx" />
     <Content Remove="wwwroot\components\home\RecentNewPagesHost.tsx" />
