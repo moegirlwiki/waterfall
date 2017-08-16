@@ -16,6 +16,11 @@
     <Content Remove="wwwroot\components\models\Card.ts" />
     <Content Remove="wwwroot\components\typings\react-visibility-sensor.d.ts" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Content Update="wwwroot\app\*.map" CopyToPublishDirectory="Never" />
+    <Content Update="wwwroot\dist" CopyToPublishDirectory="Never" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BundlerMinifier.Core" Version="2.4.337" />
