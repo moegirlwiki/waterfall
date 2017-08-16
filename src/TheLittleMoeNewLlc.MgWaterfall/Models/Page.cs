@@ -10,6 +10,6 @@
         public string Author { get; set; }
         public string Link { get; set; }
         public int NamespaceId { get; set; }
-        public bool Missing { get; set; }
+        public string Abstract { get; set; }
     }
 }

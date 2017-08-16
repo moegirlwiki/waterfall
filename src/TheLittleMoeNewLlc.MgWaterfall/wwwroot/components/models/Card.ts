@@ -7,4 +7,5 @@
     author: string;
     link: string;
     namespaceId?: number;
+    abstract?: string;
 }
