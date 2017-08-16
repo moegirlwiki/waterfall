@@ -1,5 +1,6 @@
 ﻿const path = require('path');
 const webpack = require('webpack');
+const WebpackSHAHash = require('webpack-sha-hash');
 
 module.exports = {
     context: path.join(__dirname, 'wwwroot'),
@@ -38,7 +39,8 @@ module.exports = {
             include: /\.min\.js$/,
             minimize: true,
             sourceMap: true
-        })
+        }),
+        new WebpackSHAHash()
     ],
     resolve: {
         extensions: [ '.ts', '.tsx', '.js', '.jsx', '.json' ]

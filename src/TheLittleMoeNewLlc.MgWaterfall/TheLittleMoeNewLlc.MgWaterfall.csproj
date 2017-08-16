@@ -37,6 +37,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\app\" />
     <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="wwwroot\components\home\CardGallery.tsx" />
